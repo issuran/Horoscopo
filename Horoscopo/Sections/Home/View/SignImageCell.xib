@@ -16,29 +16,51 @@
                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LUz-LK-Bcb">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gl3-n2-KfO">
                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LUz-LK-Bcb">
+                                <rect key="frame" x="16.5" y="6.5" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="1eF-ob-9Vv"/>
+                                    <constraint firstAttribute="width" constant="95" id="kse-Yb-fPd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqX-La-VbE">
+                                <rect key="frame" x="0.0" y="105.5" width="128" height="19"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="128" id="1eF-ob-9Vv"/>
-                            <constraint firstAttribute="width" constant="128" id="kse-Yb-fPd"/>
+                            <constraint firstItem="vqX-La-VbE" firstAttribute="leading" secondItem="gl3-n2-KfO" secondAttribute="leading" id="3ix-FG-9FU"/>
+                            <constraint firstAttribute="height" constant="128" id="8tW-ht-DWH"/>
+                            <constraint firstItem="LUz-LK-Bcb" firstAttribute="centerY" secondItem="gl3-n2-KfO" secondAttribute="centerY" constant="-10" id="OgH-2M-hBu"/>
+                            <constraint firstAttribute="width" constant="128" id="Rvf-Or-ZNG"/>
+                            <constraint firstAttribute="trailing" secondItem="vqX-La-VbE" secondAttribute="trailing" id="WKw-Mr-cVy"/>
+                            <constraint firstItem="vqX-La-VbE" firstAttribute="top" secondItem="LUz-LK-Bcb" secondAttribute="bottom" constant="4" id="lBd-zR-caT"/>
+                            <constraint firstItem="LUz-LK-Bcb" firstAttribute="centerX" secondItem="gl3-n2-KfO" secondAttribute="centerX" id="wYX-o3-DvT"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="LUz-LK-Bcb" secondAttribute="trailing" id="1Vt-Bl-B2w"/>
-                <constraint firstItem="LUz-LK-Bcb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5N4-eB-vj1"/>
-                <constraint firstAttribute="bottom" secondItem="LUz-LK-Bcb" secondAttribute="bottom" id="MBV-iF-H2q"/>
-                <constraint firstItem="LUz-LK-Bcb" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="OLy-3B-VPS"/>
-                <constraint firstItem="LUz-LK-Bcb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fmT-N0-B38"/>
-                <constraint firstItem="LUz-LK-Bcb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lbw-7n-zDS"/>
+                <constraint firstItem="gl3-n2-KfO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mGo-gT-Glf"/>
+                <constraint firstAttribute="trailing" secondItem="gl3-n2-KfO" secondAttribute="trailing" id="p2j-9v-aX7"/>
+                <constraint firstItem="gl3-n2-KfO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vNS-RH-41C"/>
+                <constraint firstAttribute="bottom" secondItem="gl3-n2-KfO" secondAttribute="bottom" id="wtO-F6-0Rw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="128" height="128"/>
             <connections>
                 <outlet property="imageView" destination="LUz-LK-Bcb" id="5ST-38-LGx"/>
+                <outlet property="signLabel" destination="vqX-La-VbE" id="GFO-Oy-jft"/>
             </connections>
-            <point key="canvasLocation" x="165.21739130434784" y="160.71428571428569"/>
+            <point key="canvasLocation" x="165.21739130434784" y="160.04464285714286"/>
         </collectionViewCell>
     </objects>
 </document>

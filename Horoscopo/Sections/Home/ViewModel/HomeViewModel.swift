@@ -11,5 +11,7 @@ import Foundation
 class HomeViewModel {
     weak var delegate: HomeCoordinatorDelegate!
     
-    let signArray: [String] = ["Aries", "Touro", "Gemeos", "Cancer", "Leao", "Virgem", "Libra", "Escorpiao", "Sagitario", "Capricornio", "Aquario", "Peixes"]
+    let signArray: [String] = ["Áries", "Touro", "Gêmeos", "Câncer",
+                               "Leão", "Virgem", "Libra", "Escorpião",
+                               "Sagitário", "Capricórnio", "Aquário", "Peixes"]
 }

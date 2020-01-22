@@ -19,17 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-45-wXV">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha seu signo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4I-45-wXV">
                     <rect key="frame" x="0.0" y="44" width="414" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="iG8-KW-7zk"/>
                     </constraints>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
+                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="1" height="1"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="91y-gW-Xaj">
-                    <rect key="frame" x="16" y="114" width="382" height="668"/>
+                    <rect key="frame" x="0.0" y="114" width="414" height="748"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lYt-V9-3fM">
                         <size key="itemSize" width="50" height="50"/>
@@ -42,12 +44,13 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="91y-gW-Xaj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0np-9W-bqz"/>
-                <constraint firstItem="91y-gW-Xaj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Buu-w3-GIG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="91y-gW-Xaj" secondAttribute="bottom" id="8Uy-eK-ooZ"/>
+                <constraint firstItem="91y-gW-Xaj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Buu-w3-GIG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g4I-45-wXV" secondAttribute="trailing" id="Jba-BQ-exf"/>
                 <constraint firstItem="g4I-45-wXV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jBG-uU-EZV"/>
                 <constraint firstItem="g4I-45-wXV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n3Y-YO-5ab"/>
                 <constraint firstItem="91y-gW-Xaj" firstAttribute="top" secondItem="g4I-45-wXV" secondAttribute="bottom" id="sKY-UD-b2O"/>
-                <constraint firstItem="91y-gW-Xaj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xHv-Zx-ecU"/>
+                <constraint firstItem="g4I-45-wXV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ueF-xP-TMA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="116"/>

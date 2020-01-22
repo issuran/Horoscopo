@@ -45,6 +45,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         let sign = viewModel?.signArray[indexPath.row] ?? ""
         cell.imageView.image = #imageLiteral(resourceName: sign)
+        cell.signLabel.text = sign
         
         return cell
     }
