@@ -76,4 +76,15 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let pulse = PulseAnimation(numberOfPulse: 1,
+                                   radius: 100,
+                                   position: collectionView.cellForItem(at: indexPath)!.center)
+        
+        pulse.animationDuration = 0.7
+        pulse.backgroundColor = UIColor(hex: viewModel?.pulseColorArray[indexPath.row] ?? "#FFFFFFFF")?.cgColor
+        
+        collectionView.layer.insertSublayer(pulse, above: collectionView.cellForItem(at: indexPath)?.layer)
+    }
 }

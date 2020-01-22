@@ -27,6 +27,7 @@
 		521E533623D7B8F7005FC42F /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E533523D7B8F7005FC42F /* UIColor+Utils.swift */; };
 		521E533923D7BE19005FC42F /* SignImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E533723D7BE19005FC42F /* SignImageCell.swift */; };
 		521E533A23D7BE19005FC42F /* SignImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521E533823D7BE19005FC42F /* SignImageCell.xib */; };
+		524EF4E423D8B00C00A8F8ED /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EF4E323D8B00C00A8F8ED /* PulseAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		521E533523D7B8F7005FC42F /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		521E533723D7BE19005FC42F /* SignImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignImageCell.swift; sourceTree = "<group>"; };
 		521E533823D7BE19005FC42F /* SignImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignImageCell.xib; sourceTree = "<group>"; };
+		524EF4E323D8B00C00A8F8ED /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			children = (
 				521E532923D7B8D5005FC42F /* CustomButton.swift */,
 				521E532823D7B8D5005FC42F /* CustomTextField.swift */,
+				524EF4E323D8B00C00A8F8ED /* PulseAnimation.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				521E52E923D7B4B9005FC42F /* ContentView.swift in Sources */,
 				521E533223D7B8E8005FC42F /* BaseCoordinator.swift in Sources */,
 				521E533623D7B8F7005FC42F /* UIColor+Utils.swift in Sources */,
+				524EF4E423D8B00C00A8F8ED /* PulseAnimation.swift in Sources */,
 				521E532223D7B890005FC42F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
