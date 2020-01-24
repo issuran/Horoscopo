@@ -86,9 +86,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         pulse.backgroundColor = UIColor(hex: viewModel?.pulseColorArray[indexPath.row] ?? "#FFFFFFFF")?.cgColor
         
         collectionView.layer.insertSublayer(pulse, above: collectionView.cellForItem(at: indexPath)?.layer)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print("Row selected: \(indexPath.row)")
+        
+        viewModel?.callDetails(sign: indexPath.row)
     }
 }

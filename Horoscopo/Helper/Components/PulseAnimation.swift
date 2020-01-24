@@ -56,8 +56,8 @@ class PulseAnimation: CALayer {
     func createOpacityAnimation() -> CAKeyframeAnimation {
         let opacityAnimiation = CAKeyframeAnimation(keyPath: "opacity")
         opacityAnimiation.duration = animationDuration
-        opacityAnimiation.values = [0.4,0.8,0]
-        opacityAnimiation.keyTimes = [0,0.3,1]
+        opacityAnimiation.values = [0.4, 0.8, 0]
+        opacityAnimiation.keyTimes = [0, 0.3, 1]
         return opacityAnimiation
     }
     
@@ -66,6 +66,6 @@ class PulseAnimation: CALayer {
         self.animationGroup.repeatCount = numebrOfPulse
         let defaultCurve = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
         self.animationGroup.timingFunction = defaultCurve
-        self.animationGroup.animations = [scaleAnimation(),createOpacityAnimation()]
+        self.animationGroup.animations = [scaleAnimation(), createOpacityAnimation()]
     }   
 }

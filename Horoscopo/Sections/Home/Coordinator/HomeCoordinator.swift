@@ -10,15 +10,16 @@ import UIKit
 
 class HomeCoordinator: BaseCoordinator {
     var navigationController: UINavigationController
-    var delegate: HomeCoordinatorDelegate!
+    
+    var homeViewModel: HomeViewModel!
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        let homeViewModel = HomeViewModel()
-        homeViewModel.delegate = delegate
+        homeViewModel = HomeViewModel()
+        homeViewModel.delegate = self
         let homeViewController = HomeViewController(viewModel: homeViewModel)
         navigationController.navigationBar.isHidden = true
         navigationController.setViewControllers([homeViewController], animated: true)
@@ -26,7 +27,10 @@ class HomeCoordinator: BaseCoordinator {
 }
 
 extension HomeCoordinator: HomeCoordinatorDelegate {
-    func callDetails(_ viewModel: HomeViewModel) {
-        print("Test")
+    func callDetails(_ viewModel: HomeViewModel, _ signTitle: String) {
+        let detailsModel = SignDetailsViewModel(signTitle)
+        let details = SignDetailsViewController(viewModel: detailsModel)
+        
+        navigationController.pushViewController(details, animated: true)
     }
 }

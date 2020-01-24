@@ -28,6 +28,16 @@
 		521E533923D7BE19005FC42F /* SignImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E533723D7BE19005FC42F /* SignImageCell.swift */; };
 		521E533A23D7BE19005FC42F /* SignImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521E533823D7BE19005FC42F /* SignImageCell.xib */; };
 		524EF4E423D8B00C00A8F8ED /* PulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EF4E323D8B00C00A8F8ED /* PulseAnimation.swift */; };
+		525F98D223DB2C750087BE65 /* SignDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98D023DB2C750087BE65 /* SignDetailsViewController.swift */; };
+		525F98D323DB2C750087BE65 /* SignDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525F98D123DB2C750087BE65 /* SignDetailsViewController.xib */; };
+		525F98D523DB31440087BE65 /* SignDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98D423DB31440087BE65 /* SignDetailsViewModel.swift */; };
+		525F98D823DB317C0087BE65 /* SignDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98D723DB317C0087BE65 /* SignDetailsModel.swift */; };
+		525F98DB23DB505C0087BE65 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DA23DB505C0087BE65 /* ServiceProtocol.swift */; };
+		525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DC23DB50880087BE65 /* ServiceProvider.swift */; };
+		525F98E023DB50AC0087BE65 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DF23DB50AC0087BE65 /* ServiceError.swift */; };
+		525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E123DB50C90087BE65 /* ParameterEncoder.swift */; };
+		525F98E523DB51090087BE65 /* SignAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E423DB51090087BE65 /* SignAPI.swift */; };
+		525F98E823DB52F50087BE65 /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E723DB52F50087BE65 /* SignService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +76,16 @@
 		521E533723D7BE19005FC42F /* SignImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignImageCell.swift; sourceTree = "<group>"; };
 		521E533823D7BE19005FC42F /* SignImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignImageCell.xib; sourceTree = "<group>"; };
 		524EF4E323D8B00C00A8F8ED /* PulseAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseAnimation.swift; sourceTree = "<group>"; };
+		525F98D023DB2C750087BE65 /* SignDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDetailsViewController.swift; sourceTree = "<group>"; };
+		525F98D123DB2C750087BE65 /* SignDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignDetailsViewController.xib; sourceTree = "<group>"; };
+		525F98D423DB31440087BE65 /* SignDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDetailsViewModel.swift; sourceTree = "<group>"; };
+		525F98D723DB317C0087BE65 /* SignDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDetailsModel.swift; sourceTree = "<group>"; };
+		525F98DA23DB505C0087BE65 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		525F98DC23DB50880087BE65 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		525F98DF23DB50AC0087BE65 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		525F98E123DB50C90087BE65 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		525F98E423DB51090087BE65 /* SignAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAPI.swift; sourceTree = "<group>"; };
+		525F98E723DB52F50087BE65 /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +160,8 @@
 		521E530823D7B6C2005FC42F /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				525F98E323DB50F40087BE65 /* Network */,
+				525F98CD23DB2A560087BE65 /* Details */,
 				521E530923D7B6D3005FC42F /* Home */,
 			);
 			path = Sections;
@@ -194,6 +216,7 @@
 		521E532623D7B8C0005FC42F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				525F98D923DB503A0087BE65 /* Network */,
 				521E533423D7B8EF005FC42F /* Utils */,
 				521E532C23D7B8D9005FC42F /* Protocols */,
 				521E532723D7B8CE005FC42F /* Components */,
@@ -235,6 +258,77 @@
 				521E533523D7B8F7005FC42F /* UIColor+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		525F98CD23DB2A560087BE65 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				525F98E623DB52E90087BE65 /* Network */,
+				525F98D623DB316A0087BE65 /* Model */,
+				525F98CE23DB2A8D0087BE65 /* View */,
+				525F98CF23DB2A980087BE65 /* ViewModel */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		525F98CE23DB2A8D0087BE65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				525F98D023DB2C750087BE65 /* SignDetailsViewController.swift */,
+				525F98D123DB2C750087BE65 /* SignDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		525F98CF23DB2A980087BE65 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				525F98D423DB31440087BE65 /* SignDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		525F98D623DB316A0087BE65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				525F98D723DB317C0087BE65 /* SignDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		525F98D923DB503A0087BE65 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				525F98DE23DB50960087BE65 /* Encoder */,
+				525F98DA23DB505C0087BE65 /* ServiceProtocol.swift */,
+				525F98DC23DB50880087BE65 /* ServiceProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		525F98DE23DB50960087BE65 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				525F98DF23DB50AC0087BE65 /* ServiceError.swift */,
+				525F98E123DB50C90087BE65 /* ParameterEncoder.swift */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		525F98E323DB50F40087BE65 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				525F98E423DB51090087BE65 /* SignAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		525F98E623DB52E90087BE65 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				525F98E723DB52F50087BE65 /* SignService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525F98D323DB2C750087BE65 /* SignDetailsViewController.xib in Resources */,
 				521E52F123D7B4BA005FC42F /* LaunchScreen.storyboard in Resources */,
 				521E52EE23D7B4BA005FC42F /* Preview Assets.xcassets in Resources */,
 				521E52EB23D7B4BA005FC42F /* Assets.xcassets in Resources */,
@@ -340,20 +435,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525F98D223DB2C750087BE65 /* SignDetailsViewController.swift in Sources */,
 				521E533323D7B8E8005FC42F /* AppCoordinator.swift in Sources */,
+				525F98DB23DB505C0087BE65 /* ServiceProtocol.swift in Sources */,
 				521E531B23D7B84F005FC42F /* HomeCoordinatorDelegate.swift in Sources */,
 				521E52E523D7B4B9005FC42F /* AppDelegate.swift in Sources */,
 				521E533123D7B8E8005FC42F /* Coordinator.swift in Sources */,
+				525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */,
 				521E532B23D7B8D5005FC42F /* CustomButton.swift in Sources */,
 				521E532523D7B8A4005FC42F /* HomeViewModel.swift in Sources */,
 				521E531C23D7B84F005FC42F /* HomeCoordinator.swift in Sources */,
 				521E532A23D7B8D5005FC42F /* CustomTextField.swift in Sources */,
 				521E533923D7BE19005FC42F /* SignImageCell.swift in Sources */,
+				525F98D823DB317C0087BE65 /* SignDetailsModel.swift in Sources */,
+				525F98E023DB50AC0087BE65 /* ServiceError.swift in Sources */,
 				521E52E723D7B4B9005FC42F /* SceneDelegate.swift in Sources */,
 				521E52E923D7B4B9005FC42F /* ContentView.swift in Sources */,
 				521E533223D7B8E8005FC42F /* BaseCoordinator.swift in Sources */,
+				525F98D523DB31440087BE65 /* SignDetailsViewModel.swift in Sources */,
+				525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */,
 				521E533623D7B8F7005FC42F /* UIColor+Utils.swift in Sources */,
 				524EF4E423D8B00C00A8F8ED /* PulseAnimation.swift in Sources */,
+				525F98E523DB51090087BE65 /* SignAPI.swift in Sources */,
+				525F98E823DB52F50087BE65 /* SignService.swift in Sources */,
 				521E532223D7B890005FC42F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

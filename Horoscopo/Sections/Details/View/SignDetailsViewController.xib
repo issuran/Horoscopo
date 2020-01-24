@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignDetailsViewController" customModule="Horoscopo" customModuleProvider="target">
+            <connections>
+                <outlet property="authorLabel" destination="wSr-bR-cen" id="pKk-9N-FnU"/>
+                <outlet property="signImageView" destination="byk-9B-8U2" id="pcA-jV-tXi"/>
+                <outlet property="signLuckLabel" destination="K7b-i8-4yM" id="Fm2-28-qt2"/>
+                <outlet property="signTitleLabel" destination="zAK-4i-XeY" id="xC4-YT-rY5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Áries" translatesAutoresizingMaskIntoConstraints="NO" id="byk-9B-8U2">
+                    <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="mb5-ub-QIU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você é um signo muito legal." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7b-i8-4yM">
+                    <rect key="frame" x="16" y="251.5" width="382" height="22"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-bR-cen">
+                    <rect key="frame" x="0.0" y="303.5" width="394" height="21.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Áries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAK-4i-XeY">
+                    <rect key="frame" x="0.0" y="194" width="414" height="35.5"/>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K7b-i8-4yM" secondAttribute="trailing" constant="16" id="0Sh-s9-eun"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zAK-4i-XeY" secondAttribute="trailing" id="1iL-zq-7qM"/>
+                <constraint firstItem="byk-9B-8U2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3R2-Xq-3mb"/>
+                <constraint firstItem="wSr-bR-cen" firstAttribute="top" secondItem="K7b-i8-4yM" secondAttribute="bottom" constant="30" id="4Fp-aH-Hr5"/>
+                <constraint firstItem="byk-9B-8U2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AQv-l3-T9c"/>
+                <constraint firstItem="wSr-bR-cen" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R50-8H-Mvr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="byk-9B-8U2" secondAttribute="trailing" id="bId-es-mJY"/>
+                <constraint firstItem="K7b-i8-4yM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dWk-9u-wOV"/>
+                <constraint firstItem="zAK-4i-XeY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fZM-2P-9LJ"/>
+                <constraint firstItem="K7b-i8-4yM" firstAttribute="top" secondItem="zAK-4i-XeY" secondAttribute="bottom" constant="22" id="fhP-TW-qxF"/>
+                <constraint firstItem="zAK-4i-XeY" firstAttribute="top" secondItem="byk-9B-8U2" secondAttribute="bottom" constant="22" id="mYk-zd-Ml7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wSr-bR-cen" secondAttribute="trailing" constant="20" id="vo9-LV-MCb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Áries" width="512" height="512"/>
+    </resources>
+</document>

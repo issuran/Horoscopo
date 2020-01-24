@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeCoordinatorDelegate: AnyObject {
-    func callDetails(_ viewModel: HomeViewModel)
+    func callDetails(_ viewModel: HomeViewModel, _ signTitle: String)
 }
