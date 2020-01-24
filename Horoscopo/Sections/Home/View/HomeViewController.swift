@@ -87,4 +87,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         collectionView.layer.insertSublayer(pulse, above: collectionView.cellForItem(at: indexPath)?.layer)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print("Row selected: \(indexPath.row)")
+    }
 }
