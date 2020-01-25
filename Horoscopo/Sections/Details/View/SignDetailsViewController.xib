@@ -9,10 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignDetailsViewController" customModule="Horoscopo" customModuleProvider="target">
             <connections>
-                <outlet property="authorLabel" destination="wSr-bR-cen" id="pKk-9N-FnU"/>
-                <outlet property="signImageView" destination="byk-9B-8U2" id="pcA-jV-tXi"/>
-                <outlet property="signLuckLabel" destination="K7b-i8-4yM" id="Fm2-28-qt2"/>
-                <outlet property="signTitleLabel" destination="zAK-4i-XeY" id="xC4-YT-rY5"/>
+                <outlet property="authorLabel" destination="ynu-Lx-P2S" id="RMa-pt-88c"/>
+                <outlet property="signImageView" destination="aXn-YQ-9ec" id="zCk-g1-GHc"/>
+                <outlet property="signLuckLabel" destination="KSM-9I-l1h" id="b6H-hy-yC3"/>
+                <outlet property="signTitleLabel" destination="f1H-9n-KbY" id="FVu-kb-Gs6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,52 +21,85 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Áries" translatesAutoresizingMaskIntoConstraints="NO" id="byk-9B-8U2">
-                    <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIQ-w2-r4a">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-jv-ph5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="240.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aXn-YQ-9ec">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="eJ6-ch-UM3"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-9n-KbY">
+                                    <rect key="frame" x="16" y="136" width="382" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="Tuq-dY-U2o"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <size key="shadowOffset" width="1" height="1"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estamos consultando as estrelas..." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSM-9I-l1h">
+                                    <rect key="frame" x="16" y="152" width="382" height="22.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="VIX-gy-asC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynu-Lx-P2S">
+                                    <rect key="frame" x="16" y="199.5" width="382" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="i1n-xk-Obi"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="KSM-9I-l1h" firstAttribute="top" secondItem="f1H-9n-KbY" secondAttribute="bottom" constant="16" id="Acf-Z7-ffN"/>
+                                <constraint firstAttribute="bottom" secondItem="ynu-Lx-P2S" secondAttribute="bottom" constant="20" id="HNs-qj-9Ai"/>
+                                <constraint firstAttribute="trailing" secondItem="ynu-Lx-P2S" secondAttribute="trailing" constant="16" id="Iw6-OT-l2H"/>
+                                <constraint firstAttribute="trailing" secondItem="aXn-YQ-9ec" secondAttribute="trailing" id="S7Q-0s-d6K"/>
+                                <constraint firstItem="ynu-Lx-P2S" firstAttribute="leading" secondItem="LVC-jv-ph5" secondAttribute="leading" constant="16" id="eLL-mv-6Co"/>
+                                <constraint firstItem="KSM-9I-l1h" firstAttribute="leading" secondItem="LVC-jv-ph5" secondAttribute="leading" constant="16" id="eck-w3-NnD"/>
+                                <constraint firstItem="aXn-YQ-9ec" firstAttribute="leading" secondItem="LVC-jv-ph5" secondAttribute="leading" id="fFl-IL-10q"/>
+                                <constraint firstItem="ynu-Lx-P2S" firstAttribute="top" secondItem="KSM-9I-l1h" secondAttribute="bottom" constant="25" id="h7m-2A-U7t"/>
+                                <constraint firstAttribute="trailing" secondItem="KSM-9I-l1h" secondAttribute="trailing" constant="16" id="iiJ-7g-6af"/>
+                                <constraint firstItem="f1H-9n-KbY" firstAttribute="top" secondItem="aXn-YQ-9ec" secondAttribute="bottom" constant="8" id="jSJ-RQ-7V4"/>
+                                <constraint firstItem="aXn-YQ-9ec" firstAttribute="top" secondItem="LVC-jv-ph5" secondAttribute="top" id="mQa-RG-R1T"/>
+                                <constraint firstAttribute="trailing" secondItem="f1H-9n-KbY" secondAttribute="trailing" constant="16" id="nQj-cY-WDC"/>
+                                <constraint firstItem="f1H-9n-KbY" firstAttribute="leading" secondItem="LVC-jv-ph5" secondAttribute="leading" constant="16" id="wU9-IC-ckH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="mb5-ub-QIU"/>
+                        <constraint firstAttribute="trailing" secondItem="LVC-jv-ph5" secondAttribute="trailing" id="3au-HK-azW"/>
+                        <constraint firstItem="LVC-jv-ph5" firstAttribute="height" secondItem="DIQ-w2-r4a" secondAttribute="height" priority="250" id="9JD-gj-fb7"/>
+                        <constraint firstItem="LVC-jv-ph5" firstAttribute="leading" secondItem="DIQ-w2-r4a" secondAttribute="leading" id="H8Q-lb-R4J"/>
+                        <constraint firstItem="LVC-jv-ph5" firstAttribute="width" secondItem="DIQ-w2-r4a" secondAttribute="width" id="JfA-bE-dXV"/>
+                        <constraint firstItem="LVC-jv-ph5" firstAttribute="top" secondItem="DIQ-w2-r4a" secondAttribute="top" id="JzH-Th-5s3"/>
+                        <constraint firstAttribute="bottom" secondItem="LVC-jv-ph5" secondAttribute="bottom" id="tE8-OA-vhC"/>
                     </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você é um signo muito legal." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7b-i8-4yM">
-                    <rect key="frame" x="16" y="251.5" width="382" height="22"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="19"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-bR-cen">
-                    <rect key="frame" x="0.0" y="303.5" width="394" height="21.5"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="18"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Áries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAK-4i-XeY">
-                    <rect key="frame" x="0.0" y="194" width="414" height="35.5"/>
-                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <size key="shadowOffset" width="1" height="1"/>
-                </label>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K7b-i8-4yM" secondAttribute="trailing" constant="16" id="0Sh-s9-eun"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zAK-4i-XeY" secondAttribute="trailing" id="1iL-zq-7qM"/>
-                <constraint firstItem="byk-9B-8U2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3R2-Xq-3mb"/>
-                <constraint firstItem="wSr-bR-cen" firstAttribute="top" secondItem="K7b-i8-4yM" secondAttribute="bottom" constant="30" id="4Fp-aH-Hr5"/>
-                <constraint firstItem="byk-9B-8U2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AQv-l3-T9c"/>
-                <constraint firstItem="wSr-bR-cen" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R50-8H-Mvr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="byk-9B-8U2" secondAttribute="trailing" id="bId-es-mJY"/>
-                <constraint firstItem="K7b-i8-4yM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dWk-9u-wOV"/>
-                <constraint firstItem="zAK-4i-XeY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fZM-2P-9LJ"/>
-                <constraint firstItem="K7b-i8-4yM" firstAttribute="top" secondItem="zAK-4i-XeY" secondAttribute="bottom" constant="22" id="fhP-TW-qxF"/>
-                <constraint firstItem="zAK-4i-XeY" firstAttribute="top" secondItem="byk-9B-8U2" secondAttribute="bottom" constant="22" id="mYk-zd-Ml7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wSr-bR-cen" secondAttribute="trailing" constant="20" id="vo9-LV-MCb"/>
+                <constraint firstItem="DIQ-w2-r4a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4ET-dM-zQw"/>
+                <constraint firstItem="DIQ-w2-r4a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EXK-6V-3oU"/>
+                <constraint firstItem="DIQ-w2-r4a" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hb7-Rg-iEs"/>
+                <constraint firstItem="DIQ-w2-r4a" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="n8D-Zi-fRG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="110"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </view>
     </objects>
-    <resources>
-        <image name="Áries" width="512" height="512"/>
-    </resources>
 </document>

@@ -26,7 +26,9 @@ class SignDetailsViewModel {
     }
     
     func getSignDetails() {
-        service.getSignToday(sign: signDetails.lowercased()) { [weak self] (result) in
+        var signFixed = signDetails.lowercased()
+        signFixed = signFixed.folding(options: .diacriticInsensitive, locale: .current)
+        service.getSignToday(sign: signFixed) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let data, _):
