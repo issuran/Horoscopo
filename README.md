@@ -22,12 +22,11 @@ Home          | Details
 Tiago Oliveira
 
 ## Images :file_folder:
-- App Icon
-Icon made by [iconixar](https://www.flaticon.com/authors/iconixar) from [Flaticon](www.flaticon.com)
+- App made by [iconixar](https://www.flaticon.com/authors/iconixar) from [Flaticon](www.flaticon.com)
 
 - Zodiac signs
 Icon pack by [Freepik](https://www.flaticon.com/authors/freepik) from [Flaticon](www.flaticon.com)
 
 ## License :bookmark:
 
-Jeni is released under the MIT license. See [LICENSE](https://github.com/issuran/Jeni/blob/master/LICENSE) for more information.
+Horoscopo is released under the MIT license. See [LICENSE](https://github.com/issuran/Jeni/blob/master/LICENSE) for more information.
