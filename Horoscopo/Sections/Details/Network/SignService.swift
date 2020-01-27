@@ -18,7 +18,6 @@ class SignService: ServiceProvider<SignAPI> {
                 switch result {
                 case .success(let data, let response):
                     let decoder = JSONDecoder()
-                    print(data)
                     let model = try! decoder.decode(SignDetailsModel.self, from: data)
                     completion(.success(model, response))
                 case .failure(let error):

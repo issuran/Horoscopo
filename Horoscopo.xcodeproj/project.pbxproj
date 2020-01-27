@@ -38,6 +38,7 @@
 		525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E123DB50C90087BE65 /* ParameterEncoder.swift */; };
 		525F98E523DB51090087BE65 /* SignAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E423DB51090087BE65 /* SignAPI.swift */; };
 		525F98E823DB52F50087BE65 /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E723DB52F50087BE65 /* SignService.swift */; };
+		52E5E51C23DFABFE00D5473F /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E51B23DFABFE00D5473F /* HUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		525F98E123DB50C90087BE65 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		525F98E423DB51090087BE65 /* SignAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAPI.swift; sourceTree = "<group>"; };
 		525F98E723DB52F50087BE65 /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
+		52E5E51B23DFABFE00D5473F /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				521E533523D7B8F7005FC42F /* UIColor+Utils.swift */,
+				52E5E51B23DFABFE00D5473F /* HUD.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */,
 				521E533623D7B8F7005FC42F /* UIColor+Utils.swift in Sources */,
 				524EF4E423D8B00C00A8F8ED /* PulseAnimation.swift in Sources */,
+				52E5E51C23DFABFE00D5473F /* HUD.swift in Sources */,
 				525F98E523DB51090087BE65 /* SignAPI.swift in Sources */,
 				525F98E823DB52F50087BE65 /* SignService.swift in Sources */,
 				521E532223D7B890005FC42F /* HomeViewController.swift in Sources */,

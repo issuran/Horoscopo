@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-jv-ph5">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="240.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aXn-YQ-9ec">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
@@ -34,9 +34,9 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-9n-KbY">
-                                    <rect key="frame" x="16" y="136" width="382" height="0.0"/>
+                                    <rect key="frame" x="16" y="136" width="382" height="33"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" id="Tuq-dY-U2o"/>
+                                        <constraint firstAttribute="height" constant="33" id="2qf-Rq-54N"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,17 +44,17 @@
                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <size key="shadowOffset" width="1" height="1"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estamos consultando as estrelas..." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSM-9I-l1h">
-                                    <rect key="frame" x="16" y="152" width="382" height="22.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSM-9I-l1h">
+                                    <rect key="frame" x="16" y="185" width="382" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="VIX-gy-asC"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Thonburi-Light" family="Thonburi" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <color key="textColor" red="0.23273453116416931" green="0.15427315235137939" blue="0.24931085109710693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynu-Lx-P2S">
-                                    <rect key="frame" x="16" y="199.5" width="382" height="21"/>
+                                    <rect key="frame" x="16" y="231" width="382" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="i1n-xk-Obi"/>
                                     </constraints>

@@ -33,6 +33,9 @@ class SignDetailsViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "zBackgroundImage"))
         signImageView.image = #imageLiteral(resourceName: viewModel.signDetails)
         signTitleLabel.text = viewModel.signDetails
+        DispatchQueue.main.async {
+            HUD.shared.showLoading(self.view)
+        }
     }
     
 }
@@ -40,14 +43,19 @@ class SignDetailsViewController: UIViewController {
 extension SignDetailsViewController: SignDetailsResultProtocol {
     func success(model: SignDetailsModel?) {
         DispatchQueue.main.async {
+            self.signTitleLabel.text = self.viewModel.signDetails
             self.signLuckLabel.text = model?.texto ?? ""
             self.authorLabel.text = model?.autor ?? ""
+            HUD.shared.hideLoading()
         }
     }
     
     func failure(error: ServiceError) {
-        signTitleLabel.text = ":("
-        signLuckLabel.text = "As estrelas não estão muito certas de seu futuro para hoje... \nTente novamente mais tarde..."
-        authorLabel.text = ""
+        DispatchQueue.main.async {
+            self.signTitleLabel.text = ":("
+            self.signLuckLabel.text = "As estrelas não estão muito certas de seu futuro para hoje... \nTente novamente mais tarde..."
+            self.authorLabel.text = ""
+            HUD.shared.hideLoading()
+        }
     }
 }
