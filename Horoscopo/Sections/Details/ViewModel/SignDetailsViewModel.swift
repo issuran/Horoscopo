@@ -20,9 +20,11 @@ class SignDetailsViewModel {
     weak var delegate: SignDetailsResultProtocol!
     
     var signDetails: String
+    var signBackgroundColor: String
     
-    init(_ signDetails: String) {
+    init(_ signDetails: String, _ signBackgroundColor: String) {
         self.signDetails = signDetails
+        self.signBackgroundColor = signBackgroundColor
     }
     
     func getSignDetails() {

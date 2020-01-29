@@ -27,8 +27,8 @@ class HomeCoordinator: BaseCoordinator {
 }
 
 extension HomeCoordinator: HomeCoordinatorDelegate {
-    func callDetails(_ viewModel: HomeViewModel, _ signTitle: String) {
-        let detailsModel = SignDetailsViewModel(signTitle)
+    func callDetails(_ viewModel: HomeViewModel, _ signTitle: String, _ signBackgroundColor: String) {
+        let detailsModel = SignDetailsViewModel(signTitle, signBackgroundColor)        
         let details = SignDetailsViewController(viewModel: detailsModel)
         
         navigationController.pushViewController(details, animated: true)
