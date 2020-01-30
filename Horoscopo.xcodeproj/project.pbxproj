@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -354,7 +354,6 @@
 				28E52C3909E97A2ED23C8C7F /* Pods-HoroscopoTests.debug.xcconfig */,
 				F15E3ED81ADAEE6104A2A1EE /* Pods-HoroscopoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
