@@ -6,7 +6,7 @@ target 'Horoscopo' do
   use_frameworks!
 
   # Pods for Horoscopo
-pod 'SwiftSoup'
+pod 'SwiftSoup', '~> 2.0.0'
 
   target 'HoroscopoTests' do
     inherit! :search_paths

@@ -14,6 +14,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    @IBAction func testeMe(_ sender: Any) {
+        WebScraping.shared.testMe()
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,4 +93,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         viewModel?.callDetails(sign: indexPath.row)
     }
+    
+    
 }

@@ -18,7 +18,7 @@ public class Entities {
     private static let emptyName = ""
     private static let codepointRadix: Int = 36
 
-    public class EscapeMode: Equatable {
+    public struct EscapeMode: Equatable {
 
         /** Restricted entities suitable for XHTML output: lt, gt, amp, and quot only. */
         public static let xhtml: EscapeMode = EscapeMode(string: Entities.xhtml, size: 4, id: 0)
@@ -29,19 +29,13 @@ public class Entities {
 
         fileprivate let value: Int
 
-        struct NamedCodepoint {
-            let scalar: UnicodeScalar
-            let name: String
-        }
-        
-        // Array of named references, sorted by name for binary search. built by BuildEntities.
-        // The few entities that map to a multi-codepoint sequence go into multipoints.
-        fileprivate var entitiesByName: [NamedCodepoint] = []
+        // table of named references to their codepoints. sorted so we can binary search. built by BuildEntities.
+        fileprivate var nameKeys: [String]
+        fileprivate var codeVals: [Int]  // limitation is the few references with multiple characters; those go into multipoints.
 
-        // Array of entities in first-codepoint order. We don't currently support
-        // multicodepoints to single named value currently. Lazy because this index
-        // is used only when generating HTML text.
-        fileprivate lazy var entitiesByCodepoint = entitiesByName.sorted() { a, b in a.scalar < b.scalar }
+        // table of codepoints to named entities.
+        fileprivate var codeKeys: [Int] // we don' support multicodepoints to single named value currently
+        fileprivate var nameVals: [String]
 
         public static func == (left: EscapeMode, right: EscapeMode) -> Bool {
             return left.value == right.value
@@ -52,14 +46,23 @@ public class Entities {
         }
 
         private static let codeDelims: [UnicodeScalar]  = [",", ";"]
-        
+
         init(string: String, size: Int, id: Int) {
-            
-            value = id
+            nameKeys = [String](repeating: "", count: size)
+            codeVals = [Int](repeating: 0, count: size)
+            codeKeys = [Int](repeating: 0, count: size)
+            nameVals = [String](repeating: "", count: size)
+            value  = id
+
+            //Load()
+
+            var i = 0
+
             let reader: CharacterReader = CharacterReader(string)
-            
-            entitiesByName.reserveCapacity(size)
-            while !reader.isEmpty() {
+
+            while (!reader.isEmpty()) {
+                // NotNestedLessLess=10913,824;1887
+
                 let name: String = reader.consumeTo("=")
                 reader.advance()
                 let cp1: Int = Int(reader.consumeToAny(EscapeMode.codeDelims), radix: codepointRadix) ?? 0
@@ -72,46 +75,100 @@ public class Entities {
                 } else {
                     cp2 = empty
                 }
-                let _ = Int(reader.consumeTo("\n"), radix: codepointRadix) ?? 0
+                let index: Int = Int(reader.consumeTo("\n"), radix: codepointRadix) ?? 0
                 reader.advance()
 
-                entitiesByName.append(NamedCodepoint(scalar: UnicodeScalar(cp1)!, name: name))
+                nameKeys[i] = name
+                codeVals[i] = cp1
+                codeKeys[index] = cp1
+                nameVals[index] = name
 
                 if (cp2 != empty) {
-                    multipoints[name] = [UnicodeScalar(cp1)!, UnicodeScalar(cp2)!]
+                    var s = String()
+                    s.append(Character(UnicodeScalar(cp1)!))
+                    s.append(Character(UnicodeScalar(cp2)!))
+                    multipoints[name] = s
+                }
+                i = i + 1
+            }
+        }
+
+//        init(string: String, size: Int, id: Int) {
+//            nameKeys = [String](repeating: "", count: size)
+//            codeVals = [Int](repeating: 0, count: size)
+//            codeKeys = [Int](repeating: 0, count: size)
+//            nameVals = [String](repeating: "", count: size)
+//            value  = id
+//            
+//            let components = string.components(separatedBy: "\n")
+//            
+//            var i = 0
+//            for entry  in components {
+//                let match = Entities.entityPattern.matcher(in: entry)
+//                if (match.find()) {
+//                    let name = match.group(1)!
+//                    let cp1 = Int(match.group(2)!, radix: codepointRadix)
+//                    //let cp2 = Int(Int.parseInt(s: match.group(3), radix: codepointRadix))
+//                    let cp2 = match.group(3) != nil ? Int(match.group(3)!, radix: codepointRadix) : empty
+//                    let index = Int(match.group(4)!, radix: codepointRadix)
+//                    
+//                    nameKeys[i] = name
+//                    codeVals[i] = cp1!
+//                    codeKeys[index!] = cp1!
+//                    nameVals[index!] = name
+//                    
+//                    if (cp2 != empty) {
+//                        var s = String()
+//                        s.append(Character(UnicodeScalar(cp1!)!))
+//                        s.append(Character(UnicodeScalar(cp2!)!))
+//                        multipoints[name] = s
+//                    }
+//                    i += 1
+//                }
+//            }
+//        }
+
+        public func codepointForName(_ name: String) -> Int {
+//            for s in nameKeys {
+//                if s == name {
+//                    return codeVals[nameKeys.index(of: s)!]
+//                }
+//            }
+            guard let index = nameKeys.firstIndex(of: name) else {
+                return empty
+            }
+            return codeVals[index]
+        }
+
+        public func nameForCodepoint(_ codepoint: Int ) -> String {
+            //let ss = codeKeys.index(of: codepoint)
+
+            var index = -1
+            for s in codeKeys {
+                if s == codepoint {
+                    index = codeKeys.firstIndex(of: codepoint)!
                 }
             }
-            // Entities should start in name order, but better safe than sorry...
-            entitiesByName.sort() { a, b in a.name < b.name }
-        }
 
-        // Only returns the first of potentially multiple codepoints
-        public func codepointForName(_ name: String) -> UnicodeScalar? {
-            let ix = entitiesByName.binarySearch { $0.name < name }
-            guard ix < entitiesByName.endIndex else { return nil }
-            let entity = entitiesByName[ix]
-            guard entity.name == name else { return nil }
-            return entity.scalar
-        }
-
-        // Search by first codepoint only
-        public func nameForCodepoint(_ codepoint: UnicodeScalar ) -> String? {
-            var ix = entitiesByCodepoint.binarySearch { $0.scalar < codepoint }
-            var matches: [String] = []
-            while ix < entitiesByCodepoint.endIndex && entitiesByCodepoint[ix].scalar == codepoint {
-                matches.append(entitiesByCodepoint[ix].name)
-                ix = entitiesByCodepoint.index(after: ix)
+            if (index >= 0) {
+                // the results are ordered so lower case versions of same codepoint come after uppercase, and we prefer to emit lower
+                // (and binary search for same item with multi results is undefined
+                return (index < nameVals.count-1 && codeKeys[index+1] == codepoint) ?
+                    nameVals[index+1] : nameVals[index]
             }
-            return matches.isEmpty ? nil : matches.sorted().last!
+            return emptyName
         }
 
         private func size() -> Int {
-            return entitiesByName.count
+            return nameKeys.count
         }
 
     }
 
-    private static var multipoints: [String: [UnicodeScalar]] = [:] // name -> multiple character references
+    private static var multipoints: Dictionary<String, String>  = Dictionary<String, String>() // name -> multiple character references
+
+    private init() {
+    }
 
     /**
      * Check if the input is a known named entity
@@ -119,7 +176,7 @@ public class Entities {
      * @return true if a known named entity
      */
     public static func isNamedEntity(_ name: String ) -> Bool {
-        return (EscapeMode.extended.codepointForName(name) != nil)
+        return (EscapeMode.extended.codepointForName(name) != empty)
     }
 
     /**
@@ -129,7 +186,17 @@ public class Entities {
      * @see #isNamedEntity(String)
      */
     public static func isBaseNamedEntity(_ name: String) -> Bool {
-        return EscapeMode.base.codepointForName(name) != nil
+        return EscapeMode.base.codepointForName(name) != empty
+    }
+
+    /**
+     * Get the Character value of the named entity
+     * @param name named entity (e.g. "lt" or "amp")
+     * @return the Character value of the named entity (e.g. '{@literal <}' or '{@literal &}')
+     * @deprecated does not support characters outside the BMP or multiple character names
+     */
+    public static func getCharacterByName(name: String) -> Character {
+        return Character.convertFromIntegerLiteral(value: EscapeMode.extended.codepointForName(name))
     }
 
     /**
@@ -137,20 +204,30 @@ public class Entities {
      * @param name entity (e.g. "lt" or "amp")
      * @return the string value of the character(s) represented by this entity, or "" if not defined
      */
-    public static func getByName(name: String) -> String? {
-        if let scalars = codepointsForName(name) {
-            return String(String.UnicodeScalarView(scalars))
+    public static func getByName(name: String) -> String {
+        let val = multipoints[name]
+        if (val != nil) {return val!}
+        let codepoint = EscapeMode.extended.codepointForName(name)
+        if (codepoint != empty) {
+            return String(Character(UnicodeScalar(codepoint)!))
         }
-        return nil
+        return emptyName
     }
 
-    public static func codepointsForName(_ name: String) -> [UnicodeScalar]? {
-        if let scalars = multipoints[name] {
-            return scalars
-        } else if let scalar = EscapeMode.extended.codepointForName(name) {
-            return [scalar]
+    public static func codepointsForName(_ name: String, codepoints: inout [UnicodeScalar]) -> Int {
+
+        if let val: String = multipoints[name] {
+            codepoints[0] = val.unicodeScalar(0)
+            codepoints[1] = val.unicodeScalar(1)
+            return 2
         }
-        return nil
+
+        let codepoint = EscapeMode.extended.codepointForName(name)
+        if (codepoint != empty) {
+            codepoints[0] = UnicodeScalar(codepoint)!
+            return 1
+        }
+        return 0
     }
 
     public static func escape(_ string: String, _ encode: String.Encoding = .utf8 ) -> String {
@@ -249,9 +326,9 @@ public class Entities {
     }
 
     private static func appendEncoded(accum: StringBuilder, escapeMode: EscapeMode, codePoint: UnicodeScalar) {
-        if let name = escapeMode.nameForCodepoint(codePoint) {
-            // ok for identity check
-            accum.append(UnicodeScalar.Ampersand).append(name).append(";")
+        let name = escapeMode.nameForCodepoint(Int(codePoint.value))
+        if (name != emptyName) // ok for identity check
+        {accum.append(UnicodeScalar.Ampersand).append(name).append(";")
         } else {
             accum.append("&#x").append(String.toHexString(n: Int(codePoint.value)) ).append(";")
         }

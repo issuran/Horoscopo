@@ -25,9 +25,8 @@ extension String {
     }
 
 	func unicodeScalar(_ i: Int) -> UnicodeScalar {
-        let ix = unicodeScalars.index(unicodeScalars.startIndex, offsetBy: i)
-		return unicodeScalars[ix]
-    }
+		return self.unicodeScalars.prefix(i+1).last!
+	}
 
 	func string(_ offset: Int, _ count: Int) -> String {
 		let truncStart = self.unicodeScalars.count-offset
@@ -56,7 +55,7 @@ extension String {
 	func startsWith(_ string: String) -> Bool {
         return self.hasPrefix(string)
     }
-    
+
 	func indexOf(_ substring: String, _ offset: Int ) -> Int {
         if(offset > count) {return -1}
 
@@ -82,22 +81,12 @@ extension String {
     }
 
     func trim() -> String {
-        // trimmingCharacters() in the stdlib is not very efficiently
-        // implemented, perhaps because it always creates a new string.
-        // Avoid actually calling it if it's not needed.
-        guard count > 0 else { return self }
-        let (firstChar, lastChar) = (first!, last!)
-        if firstChar.isWhitespace || lastChar.isWhitespace || firstChar == "\n" || lastChar == "\n" {
-            return trimmingCharacters(in: .whitespacesAndNewlines)
-        }
-        return self
+        return trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
     }
 
     func equalsIgnoreCase(string: String?) -> Bool {
-        if let string = string {
-            return caseInsensitiveCompare(string) == .orderedSame
-        }
-        return false
+		if(string == nil) {return false}
+        return string!.lowercased() == lowercased()
     }
 
     static func toHexString(n: Int) -> String {

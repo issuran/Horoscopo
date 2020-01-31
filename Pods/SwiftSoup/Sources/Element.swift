@@ -925,9 +925,9 @@ open class Element: Node {
             if let textNode = (node as? TextNode) {
                 Element.appendNormalisedText(accum, textNode)
             } else if let element = (node as? Element) {
-                if !accum.isEmpty &&
+                if (accum.length > 0 &&
                     (element.isBlock() || element._tag.getName() == "br") &&
-                    !TextNode.lastCharIsWhitespace(accum) {
+                    !TextNode.lastCharIsWhitespace(accum)) {
                     accum.append(" ")
                 }
             }
@@ -1201,7 +1201,7 @@ open class Element: Node {
 
     override func outerHtmlHead(_ accum: StringBuilder, _ depth: Int, _ out: OutputSettings)throws {
         if (out.prettyPrint() && (_tag.formatAsBlock() || (parent() != nil && parent()!.tag().formatAsBlock()) || out.outline())) {
-            if !accum.isEmpty {
+            if (accum.length > 0) {
                 indent(accum, depth, out)
             }
         }

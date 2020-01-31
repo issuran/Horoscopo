@@ -19,9 +19,7 @@ open class StringUtil {
     }
 
     // memoised padding up to 10
-    fileprivate static let padding: [String] = ["", " ", "  ", "   ", "    ", "     ", "      ", "       ", "        ", "         ", "          "]
-    private static let empty = ""
-    private static let space = " "
+    fileprivate static var padding: [String] = ["", " ", "  ", "   ", "    ", "     ", "      ", "       ", "        ", "         ", "          "]
 
     /**
      * Join a collection of strings by a seperator
@@ -68,15 +66,20 @@ open class StringUtil {
      */
     public static func padding(_ width: Int) -> String {
 
-        if width <= 0 {
-            return empty
+        if(width <= 0) {
+            return ""
         }
 
-        if width < padding.count {
+        if (width < padding.count) {
             return padding[width]
         }
-        
-        return String.init(repeating: space, count: width)
+
+        var out: [Character] = [Character]()
+
+        for _ in 0..<width {
+            out.append(" ")
+        }
+        return String(out)
     }
 
     /**
@@ -162,6 +165,19 @@ open class StringUtil {
         }
     }
 
+    public static func inString(_ needle: String?, haystack: String...) -> Bool {
+        return inString(needle, haystack)
+    }
+    public static func inString(_ needle: String?, _ haystack: [String?]) -> Bool {
+        if(needle == nil) {return false}
+        for hay in haystack {
+            if(hay != nil  && hay! == needle!) {
+                return true
+            }
+        }
+        return false
+    }
+
 //    open static func inSorted(_ needle: String, haystack: [String]) -> Bool {
 //        return binarySearch(haystack, searchItem: needle) >= 0
 //    }
@@ -215,7 +231,7 @@ open class StringUtil {
 
         if(base == nil || base?.scheme == nil) {
             let abs = URL(string: relUrl)
-			return abs != nil && abs?.scheme != nil ? abs!.absoluteURL.absoluteString : empty
+			return abs != nil && abs?.scheme != nil ? abs!.absoluteURL.absoluteString : ""
         } else {
             let url = resolve(base!, relUrl: relUrl)
             if(url != nil) {
@@ -228,7 +244,7 @@ open class StringUtil {
                 return ext
             }
 
-            return empty
+            return ""
         }
 
 //        try {

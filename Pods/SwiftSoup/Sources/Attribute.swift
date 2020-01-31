@@ -119,7 +119,7 @@ open class Attribute {
     }
 
     public func isBooleanAttribute() -> Bool {
-        return Attribute.booleanAttributes.contains(key.lowercased())
+        return Attribute.booleanAttributes.contains(key)
     }
 
     public func hashCode() -> Int {

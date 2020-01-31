@@ -1,9 +1,9 @@
 /**
  Supports creation of a String from pieces
- Based on https://gist.github.com/kristopherjohnson/1fc55e811d944a430289
+ https://gist.github.com/kristopherjohnson/1fc55e811d944a430289
  */
 open class StringBuilder {
-    fileprivate var buffer: [String] = []
+    fileprivate var stringValue: Array<Character>
 
     /**
      Construct with initial String contents
@@ -11,13 +11,11 @@ open class StringBuilder {
      :param: string Initial value; defaults to empty string
      */
     public init(string: String = "") {
-        if string != "" {
-            buffer.append(string)
-        }
+        self.stringValue = Array(string)
     }
 
     public init(_ size: Int) {
-        self.buffer = Array()
+        self.stringValue = Array()
     }
 
     /**
@@ -26,18 +24,15 @@ open class StringBuilder {
      :return: String
      */
     open func toString() -> String {
-        return buffer.reduce("", +)
+        return String(stringValue)
     }
 
     /**
      Return the current length of the String object
      */
-    open var xlength: Int {
-        return buffer.map { $0.count }.reduce(0, +)
-    }
-    
-    open var isEmpty: Bool {
-        return buffer.isEmpty
+    open var length: Int {
+        return self.stringValue.count
+        //return countElements(stringValue)
     }
 
     /**
@@ -48,27 +43,29 @@ open class StringBuilder {
      :return: reference to this StringBuilder instance
      */
     open func append(_ string: String) {
-        buffer.append(string)
+        stringValue.append(contentsOf: string)
     }
 
     open func appendCodePoint(_ chr: Character) {
-        buffer.append(String(chr))
+        stringValue.append(chr)
     }
 
     open func appendCodePoints(_ chr: [Character]) {
-        buffer.append(String(chr))
+        stringValue.append(contentsOf: chr)
     }
 
     open func appendCodePoint(_ ch: Int) {
-        buffer.append(String(UnicodeScalar(ch)!))
+        stringValue.append(Character(UnicodeScalar(ch)!))
     }
 
     open func appendCodePoint(_ ch: UnicodeScalar) {
-        buffer.append(String(ch))
+        stringValue.append(Character(ch))
     }
 
     open func appendCodePoints(_ chr: [UnicodeScalar]) {
-        buffer.append(String(String.UnicodeScalarView(chr)))
+        for c in chr {
+            appendCodePoint(c)
+        }
     }
 
     /**
@@ -80,13 +77,19 @@ open class StringBuilder {
      */
     @discardableResult
     open func append<T: CustomStringConvertible>(_ value: T) -> StringBuilder {
-        buffer.append(value.description)
+        stringValue.append(contentsOf: value.description)
         return self
     }
 
     @discardableResult
     open func append(_ value: UnicodeScalar) -> StringBuilder {
-        buffer.append(value.description)
+        stringValue.append(contentsOf: value.description)
+        return self
+    }
+
+    @discardableResult
+    open func insert<T: CustomStringConvertible>(_ offset: Int, _ value: T) -> StringBuilder {
+        stringValue.insert(contentsOf: value.description, at: offset)
         return self
     }
 
@@ -99,8 +102,7 @@ open class StringBuilder {
      */
     @discardableResult
     open func appendLine(_ string: String) -> StringBuilder {
-        buffer.append(string)
-        buffer.append("\n")
+        stringValue.append(contentsOf: "\n")
         return self
     }
 
@@ -113,8 +115,8 @@ open class StringBuilder {
      */
     @discardableResult
     open func appendLine<T: CustomStringConvertible>(_ value: T) -> StringBuilder {
-        buffer.append(value.description)
-        buffer.append("\n")
+        stringValue.append(contentsOf: value.description)
+        stringValue.append(contentsOf: "\n")
         return self
     }
 
@@ -125,7 +127,7 @@ open class StringBuilder {
      */
     @discardableResult
     open func clear() -> StringBuilder {
-        buffer.removeAll(keepingCapacity: true)
+        stringValue = Array()
         return self
     }
 }

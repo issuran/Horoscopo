@@ -40,13 +40,23 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6O-am-tEw">
+                    <rect key="frame" x="0.0" y="122" width="414" height="30"/>
+                    <state key="normal" title="Teste"/>
+                    <connections>
+                        <action selector="testeMe:" destination="-1" eventType="touchUpInside" id="r2h-NE-TH1"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="91y-gW-Xaj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0np-9W-bqz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T6O-am-tEw" secondAttribute="trailing" id="2It-Tz-bIC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="91y-gW-Xaj" secondAttribute="bottom" id="8Uy-eK-ooZ"/>
+                <constraint firstItem="T6O-am-tEw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B9p-iU-chI"/>
                 <constraint firstItem="91y-gW-Xaj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Buu-w3-GIG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g4I-45-wXV" secondAttribute="trailing" id="Jba-BQ-exf"/>
+                <constraint firstItem="T6O-am-tEw" firstAttribute="top" secondItem="g4I-45-wXV" secondAttribute="bottom" constant="8" id="Y8S-Qi-Idt"/>
                 <constraint firstItem="g4I-45-wXV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jBG-uU-EZV"/>
                 <constraint firstItem="g4I-45-wXV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n3Y-YO-5ab"/>
                 <constraint firstItem="91y-gW-Xaj" firstAttribute="top" secondItem="g4I-45-wXV" secondAttribute="bottom" id="sKY-UD-b2O"/>
