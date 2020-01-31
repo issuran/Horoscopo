@@ -38,6 +38,7 @@
 		525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E123DB50C90087BE65 /* ParameterEncoder.swift */; };
 		525F98E523DB51090087BE65 /* SignAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E423DB51090087BE65 /* SignAPI.swift */; };
 		525F98E823DB52F50087BE65 /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E723DB52F50087BE65 /* SignService.swift */; };
+		52D4A55423E3B42800F1BA31 /* WebScraping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4A55323E3B42800F1BA31 /* WebScraping.swift */; };
 		52E5E51C23DFABFE00D5473F /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E51B23DFABFE00D5473F /* HUD.swift */; };
 		8C52EBAF1268A0747520EF19 /* Pods_HoroscopoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2954C9D7356766292CD3FFAD /* Pods_HoroscopoTests.framework */; };
 		8CE8F3080AE8CB155D275214 /* Pods_Horoscopo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EDCF8D2E6AAC679F3FCD09 /* Pods_Horoscopo.framework */; };
@@ -92,6 +93,7 @@
 		525F98E123DB50C90087BE65 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		525F98E423DB51090087BE65 /* SignAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAPI.swift; sourceTree = "<group>"; };
 		525F98E723DB52F50087BE65 /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
+		52D4A55323E3B42800F1BA31 /* WebScraping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScraping.swift; sourceTree = "<group>"; };
 		52E5E51B23DFABFE00D5473F /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		D7EDCF8D2E6AAC679F3FCD09 /* Pods_Horoscopo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Horoscopo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64B29999D0E86306B5DEDCF /* Pods-Horoscopo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Horoscopo.release.xcconfig"; path = "Target Support Files/Pods-Horoscopo/Pods-Horoscopo.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				521E533523D7B8F7005FC42F /* UIColor+Utils.swift */,
 				52E5E51B23DFABFE00D5473F /* HUD.swift */,
+				52D4A55323E3B42800F1BA31 /* WebScraping.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				521E52E723D7B4B9005FC42F /* SceneDelegate.swift in Sources */,
 				521E52E923D7B4B9005FC42F /* ContentView.swift in Sources */,
 				521E533223D7B8E8005FC42F /* BaseCoordinator.swift in Sources */,
+				52D4A55423E3B42800F1BA31 /* WebScraping.swift in Sources */,
 				525F98D523DB31440087BE65 /* SignDetailsViewModel.swift in Sources */,
 				525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */,
 				521E533623D7B8F7005FC42F /* UIColor+Utils.swift in Sources */,
