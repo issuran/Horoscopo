@@ -17,7 +17,7 @@ Details Loading         |  Details
 ![image](https://user-images.githubusercontent.com/8193383/73599885-d2267c00-4527-11ea-9012-1ecbb10667bb.png) |   ![image](https://user-images.githubusercontent.com/8193383/73599884-d2267c00-4527-11ea-884f-d919d416615d.png)
 
 ## Short Preview :movie_camera:
-![](https://recordit.co/zO7GakTvhV)
+![](http://g.recordit.co/zO7GakTvhV.gif)
 
 ## Bugs :bug:
 - Report to me using my [e-mail](tiago_fernandes89@hotmail.com) :mailbox_with_mail:
