@@ -15,7 +15,7 @@ protocol SignDetailsResultProtocol: AnyObject {
 
 class SignDetailsViewModel {
     
-    let service = SignService()
+    let service = SignScrapService()
     var signDetailsModel: SignDetailsModel?
     weak var delegate: SignDetailsResultProtocol!
     

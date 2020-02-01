@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520D390423E629D1002F57E4 /* SignWebScrapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D390323E629D1002F57E4 /* SignWebScrapAPI.swift */; };
+		520D390623E62E89002F57E4 /* SignScrapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D390523E62E89002F57E4 /* SignScrapService.swift */; };
 		521E52E523D7B4B9005FC42F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E52E423D7B4B9005FC42F /* AppDelegate.swift */; };
 		521E52E723D7B4B9005FC42F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E52E623D7B4B9005FC42F /* SceneDelegate.swift */; };
 		521E52E923D7B4B9005FC42F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E52E823D7B4B9005FC42F /* ContentView.swift */; };
@@ -58,6 +60,8 @@
 		18E3B0F76E4A2CE1F362AADE /* Pods-Horoscopo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Horoscopo.debug.xcconfig"; path = "Target Support Files/Pods-Horoscopo/Pods-Horoscopo.debug.xcconfig"; sourceTree = "<group>"; };
 		28E52C3909E97A2ED23C8C7F /* Pods-HoroscopoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoroscopoTests.debug.xcconfig"; path = "Target Support Files/Pods-HoroscopoTests/Pods-HoroscopoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2954C9D7356766292CD3FFAD /* Pods_HoroscopoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoroscopoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		520D390323E629D1002F57E4 /* SignWebScrapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignWebScrapAPI.swift; sourceTree = "<group>"; };
+		520D390523E62E89002F57E4 /* SignScrapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignScrapService.swift; sourceTree = "<group>"; };
 		521E52E123D7B4B9005FC42F /* Horoscopo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horoscopo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521E52E423D7B4B9005FC42F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521E52E623D7B4B9005FC42F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				525F98E423DB51090087BE65 /* SignAPI.swift */,
+				520D390323E629D1002F57E4 /* SignWebScrapAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				525F98E723DB52F50087BE65 /* SignService.swift */,
+				520D390523E62E89002F57E4 /* SignScrapService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -548,6 +554,7 @@
 				521E533123D7B8E8005FC42F /* Coordinator.swift in Sources */,
 				525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */,
 				521E532B23D7B8D5005FC42F /* CustomButton.swift in Sources */,
+				520D390623E62E89002F57E4 /* SignScrapService.swift in Sources */,
 				521E532523D7B8A4005FC42F /* HomeViewModel.swift in Sources */,
 				521E531C23D7B84F005FC42F /* HomeCoordinator.swift in Sources */,
 				521E532A23D7B8D5005FC42F /* CustomTextField.swift in Sources */,
@@ -557,6 +564,7 @@
 				521E52E723D7B4B9005FC42F /* SceneDelegate.swift in Sources */,
 				521E52E923D7B4B9005FC42F /* ContentView.swift in Sources */,
 				521E533223D7B8E8005FC42F /* BaseCoordinator.swift in Sources */,
+				520D390423E629D1002F57E4 /* SignWebScrapAPI.swift in Sources */,
 				52D4A55423E3B42800F1BA31 /* WebScraping.swift in Sources */,
 				525F98D523DB31440087BE65 /* SignDetailsViewModel.swift in Sources */,
 				525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */,
