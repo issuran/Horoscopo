@@ -8,12 +8,16 @@ It is an app to show what the stars have to say about you today!
 Horoscopo is a astral app, ready to talk to the whole universe to bring you what your destiny waits for you...
 
 ## Screenshots :iphone:
-Home          | Details
+Home
+:-------------------------:
+![image](https://user-images.githubusercontent.com/8193383/73128552-e7435e00-3faf-11ea-8c3b-99c02325da4b.png)
+
+Details Loading         |  Details
 :-------------------------:|:-------------------------:
-![image](https://user-images.githubusercontent.com/8193383/73128552-e7435e00-3faf-11ea-8c3b-99c02325da4b.png)  |   ![image](https://user-images.githubusercontent.com/8193383/73128553-e7435e00-3faf-11ea-93ef-bcb134e67649.png)
+![image](https://user-images.githubusercontent.com/8193383/73599885-d2267c00-4527-11ea-9012-1ecbb10667bb.png) |   ![image](https://user-images.githubusercontent.com/8193383/73599884-d2267c00-4527-11ea-884f-d919d416615d.png)
 
 ## Short Preview :movie_camera:
-![](http://g.recordit.co/yWwvgCG0kr.gif)
+![](https://recordit.co/zO7GakTvhV)
 
 ## Bugs :bug:
 - Report to me using my [e-mail](tiago_fernandes89@hotmail.com) :mailbox_with_mail:
