@@ -15,14 +15,16 @@ protocol SignDetailsResultProtocol: AnyObject {
 
 class SignDetailsViewModel {
     
-    let service = SignService()
+    let service = SignScrapService()
     var signDetailsModel: SignDetailsModel?
     weak var delegate: SignDetailsResultProtocol!
     
     var signDetails: String
+    var signBackgroundColor: String
     
-    init(_ signDetails: String) {
+    init(_ signDetails: String, _ signBackgroundColor: String) {
         self.signDetails = signDetails
+        self.signBackgroundColor = signBackgroundColor
     }
     
     func getSignDetails() {

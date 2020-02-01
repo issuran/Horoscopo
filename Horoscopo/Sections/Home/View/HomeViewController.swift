@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self

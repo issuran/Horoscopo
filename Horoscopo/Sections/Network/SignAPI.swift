@@ -23,10 +23,7 @@ extension SignAPI: ServiceProtocol {
     }
     
     var method: HttpMethod {
-        switch self {
-        case .today:
-            return .get
-        }
+        return .get
     }
     
     var path: String {
