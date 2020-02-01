@@ -30,7 +30,7 @@ class SignDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.getSignDetails()
-        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "zBackgroundImage"))
+        createGradientBackground()
         signImageView.image = #imageLiteral(resourceName: viewModel.signDetails)
         signTitleLabel.text = viewModel.signDetails
         DispatchQueue.main.async {
@@ -38,6 +38,20 @@ class SignDetailsViewController: UIViewController {
         }
     }
     
+    func createGradientBackground() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.frame
+        let upColor = UIColor(hex: viewModel.signBackgroundColor)?.cgColor ?? UIColor.white.cgColor
+        
+        let downColor = UIColor.white.cgColor
+                    
+        gradientLayer.colors = [upColor, downColor]
+        /// To change gradient direction - vertical
+//        layer.startPoint = CGPoint(x: 0, y: 0)
+//        layer.endPoint = CGPoint(x: 1, y: 1)
+//        view.layer.addSublayer(layer)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
 }
 
 extension SignDetailsViewController: SignDetailsResultProtocol {

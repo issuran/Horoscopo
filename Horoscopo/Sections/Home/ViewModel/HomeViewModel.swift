@@ -20,6 +20,6 @@ class HomeViewModel {
                                      "#FDBB2CFF", "#DFAE66FF", "#6FD3EDFF", "#DFAE66FF"]
     
     func callDetails(sign: Int) {
-        delegate.callDetails(self, signArray[sign])
+        delegate.callDetails(self, signArray[sign], pulseColorArray[sign])
     }
 }
