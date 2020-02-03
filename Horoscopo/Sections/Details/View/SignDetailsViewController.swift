@@ -38,6 +38,11 @@ class SignDetailsViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.service.stopRequestOnGoing()
+    }
+    
     func createGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.frame

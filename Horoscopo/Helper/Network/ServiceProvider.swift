@@ -10,13 +10,14 @@ import Foundation
 
 class ServiceProvider<T: ServiceProtocol> {
     var urlSession = URLSession.shared
+    var task: URLSessionDataTask?
     
     init() { }
     
     func execute(service: T, completion: @escaping (Result<Data>) -> Void) throws {
         do {
             let request = try service.urlRequest()
-            urlSession.dataTask(with: request) { (data, response, error) in
+            task = urlSession.dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     completion(.failure(error))
                 } else if let data = data {
@@ -24,9 +25,16 @@ class ServiceProvider<T: ServiceProtocol> {
                 } else {
                     completion(.empty)
                 }
-            }.resume()
+            }
+            task?.resume()
         } catch {
             throw error
+        }
+    }
+    
+    func stopRequestOnGoing() {
+        if let task = task {
+            task.cancel()
         }
     }
 }
