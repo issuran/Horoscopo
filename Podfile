@@ -7,6 +7,9 @@ target 'Horoscopo' do
 
   # Pods for Horoscopo
 pod 'SwiftSoup', '~> 2.0.0'
+pod 'Firebase/Core'
+pod 'Firebase/Analytics'
+pod 'Firebase/AdMob'
 
   target 'HoroscopoTests' do
     inherit! :search_paths

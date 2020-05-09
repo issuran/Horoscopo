@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class SignDetailsViewController: UIViewController {
     
@@ -36,6 +37,7 @@ class SignDetailsViewController: UIViewController {
         DispatchQueue.main.async {
             HUD.shared.showLoading(self.view)
         }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
