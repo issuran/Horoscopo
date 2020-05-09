@@ -64,7 +64,7 @@ extension SignDetailsViewController: SignDetailsResultProtocol {
         DispatchQueue.main.async {
             self.signTitleLabel.text = self.viewModel.signDetails
             self.signLuckLabel.text = model?.texto ?? ""
-            self.authorLabel.text = model?.autor ?? ""
+            self.authorLabel.text = ""//model?.autor ?? ""
             HUD.shared.hideLoading()
         }
     }
