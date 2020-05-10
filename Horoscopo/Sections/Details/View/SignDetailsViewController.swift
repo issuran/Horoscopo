@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import GoogleMobileAds
 
 class SignDetailsViewController: UIViewController {
@@ -17,6 +18,8 @@ class SignDetailsViewController: UIViewController {
     @IBOutlet weak var signTitleLabel: UILabel!
     @IBOutlet weak var signLuckLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
     
     init(viewModel: SignDetailsViewModel) {
         super.init(nibName: nil, bundle: nil)
@@ -38,6 +41,9 @@ class SignDetailsViewController: UIViewController {
             HUD.shared.showLoading(self.view)
         }
         
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     override func viewWillDisappear(_ animated: Bool) {
