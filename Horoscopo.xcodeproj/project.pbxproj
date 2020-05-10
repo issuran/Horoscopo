@@ -10,7 +10,6 @@
 		520D390423E629D1002F57E4 /* SignWebScrapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D390323E629D1002F57E4 /* SignWebScrapAPI.swift */; };
 		520D390623E62E89002F57E4 /* SignScrapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D390523E62E89002F57E4 /* SignScrapService.swift */; };
 		521E52E523D7B4B9005FC42F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E52E423D7B4B9005FC42F /* AppDelegate.swift */; };
-		521E52E723D7B4B9005FC42F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E52E623D7B4B9005FC42F /* SceneDelegate.swift */; };
 		521E52EB23D7B4BA005FC42F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521E52EA23D7B4BA005FC42F /* Assets.xcassets */; };
 		521E52EE23D7B4BA005FC42F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521E52ED23D7B4BA005FC42F /* Preview Assets.xcassets */; };
 		521E52F123D7B4BA005FC42F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521E52EF23D7B4BA005FC42F /* LaunchScreen.storyboard */; };
@@ -64,7 +63,6 @@
 		520D390523E62E89002F57E4 /* SignScrapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignScrapService.swift; sourceTree = "<group>"; };
 		521E52E123D7B4B9005FC42F /* Horoscopo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horoscopo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521E52E423D7B4B9005FC42F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		521E52E623D7B4B9005FC42F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		521E52EA23D7B4BA005FC42F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521E52ED23D7B4BA005FC42F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		521E52F023D7B4BA005FC42F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				521E532623D7B8C0005FC42F /* Helper */,
 				521E530823D7B6C2005FC42F /* Sections */,
 				521E52E423D7B4B9005FC42F /* AppDelegate.swift */,
-				521E52E623D7B4B9005FC42F /* SceneDelegate.swift */,
 				521E52EA23D7B4BA005FC42F /* Assets.xcassets */,
 				521E52EF23D7B4BA005FC42F /* LaunchScreen.storyboard */,
 				521E52F223D7B4BA005FC42F /* Info.plist */,
@@ -562,7 +559,6 @@
 				521E533923D7BE19005FC42F /* SignImageCell.swift in Sources */,
 				525F98D823DB317C0087BE65 /* SignDetailsModel.swift in Sources */,
 				525F98E023DB50AC0087BE65 /* ServiceError.swift in Sources */,
-				521E52E723D7B4B9005FC42F /* SceneDelegate.swift in Sources */,
 				521E533223D7B8E8005FC42F /* BaseCoordinator.swift in Sources */,
 				520D390423E629D1002F57E4 /* SignWebScrapAPI.swift in Sources */,
 				52D4A55423E3B42800F1BA31 /* WebScraping.swift in Sources */,
