@@ -41,7 +41,7 @@ class SignDetailsViewController: UIViewController {
             HUD.shared.showLoading(self.view)
         }
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-2958449658301443/8993540920"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
