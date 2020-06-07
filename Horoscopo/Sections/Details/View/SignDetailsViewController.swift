@@ -35,8 +35,9 @@ class SignDetailsViewController: UIViewController {
         super.viewDidLoad()
         viewModel.getSignDetails()
         createGradientBackground()
-        signImageView.image = #imageLiteral(resourceName: viewModel.signDetails)
-        signTitleLabel.text = viewModel.signDetails
+        let sign: String = viewModel.signDetails
+        signImageView.image = #imageLiteral(resourceName: sign)
+        signTitleLabel.text = sign
         DispatchQueue.main.async {
             HUD.shared.showLoading(self.view)
         }
