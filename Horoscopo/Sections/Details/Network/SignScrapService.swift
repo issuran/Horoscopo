@@ -8,13 +8,15 @@
 
 import UIKit
 
-class SignScrapService: ServiceProvider<SignWebScrapAPI> {
+class SignScrapService: Provider {
+    
+    let provider = Provider()
+    
     func getSignToday(sign: String,
-                        completion: @escaping (Result<SignDetailsModel?>) -> Void) -> Void {
-        let provider = ServiceProvider<SignWebScrapAPI>()
+                      completion: @escaping (Result<SignDetailsModel?>) -> Void) -> Void {
         
         do {
-            try provider.execute(service: .today(sign: sign), completion: { (result) in
+            try provider.execute(endpoint: SignWebScrapAPI.today(sign: sign)) { (result) in
                 switch result {
                 case .success(let data, let response):
                     let html = String(data: data, encoding: String.Encoding.utf8)
@@ -25,7 +27,7 @@ class SignScrapService: ServiceProvider<SignWebScrapAPI> {
                 case .empty:
                     completion(.empty)
                 }
-            })
+            }
         } catch {
             completion(.empty)
         }

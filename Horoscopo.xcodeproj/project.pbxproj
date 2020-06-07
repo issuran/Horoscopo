@@ -37,6 +37,7 @@
 		525F98E023DB50AC0087BE65 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DF23DB50AC0087BE65 /* ServiceError.swift */; };
 		525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E123DB50C90087BE65 /* ParameterEncoder.swift */; };
 		526BB39F246700B700D90874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526BB39E246700B700D90874 /* GoogleService-Info.plist */; };
+		52920A5D248D402600F3A297 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52920A5C248D402600F3A297 /* Provider.swift */; };
 		52D4A55423E3B42800F1BA31 /* WebScraping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4A55323E3B42800F1BA31 /* WebScraping.swift */; };
 		52E5E51C23DFABFE00D5473F /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E51B23DFABFE00D5473F /* HUD.swift */; };
 		8C52EBAF1268A0747520EF19 /* Pods_HoroscopoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2954C9D7356766292CD3FFAD /* Pods_HoroscopoTests.framework */; };
@@ -91,6 +92,7 @@
 		525F98DF23DB50AC0087BE65 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		525F98E123DB50C90087BE65 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		526BB39E246700B700D90874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52920A5C248D402600F3A297 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		52D4A55323E3B42800F1BA31 /* WebScraping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScraping.swift; sourceTree = "<group>"; };
 		52E5E51B23DFABFE00D5473F /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		D7EDCF8D2E6AAC679F3FCD09 /* Pods_Horoscopo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Horoscopo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +319,7 @@
 				525F98DE23DB50960087BE65 /* Encoder */,
 				525F98DA23DB505C0087BE65 /* ServiceProtocol.swift */,
 				525F98DC23DB50880087BE65 /* ServiceProvider.swift */,
+				52920A5C248D402600F3A297 /* Provider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				521E533123D7B8E8005FC42F /* Coordinator.swift in Sources */,
 				525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */,
 				521E532B23D7B8D5005FC42F /* CustomButton.swift in Sources */,
+				52920A5D248D402600F3A297 /* Provider.swift in Sources */,
 				520D390623E62E89002F57E4 /* SignScrapService.swift in Sources */,
 				521E532523D7B8A4005FC42F /* HomeViewModel.swift in Sources */,
 				521E531C23D7B84F005FC42F /* HomeCoordinator.swift in Sources */,
