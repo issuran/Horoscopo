@@ -36,8 +36,6 @@
 		525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DC23DB50880087BE65 /* ServiceProvider.swift */; };
 		525F98E023DB50AC0087BE65 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DF23DB50AC0087BE65 /* ServiceError.swift */; };
 		525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E123DB50C90087BE65 /* ParameterEncoder.swift */; };
-		525F98E523DB51090087BE65 /* SignAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E423DB51090087BE65 /* SignAPI.swift */; };
-		525F98E823DB52F50087BE65 /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E723DB52F50087BE65 /* SignService.swift */; };
 		526BB39F246700B700D90874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526BB39E246700B700D90874 /* GoogleService-Info.plist */; };
 		52D4A55423E3B42800F1BA31 /* WebScraping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4A55323E3B42800F1BA31 /* WebScraping.swift */; };
 		52E5E51C23DFABFE00D5473F /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5E51B23DFABFE00D5473F /* HUD.swift */; };
@@ -92,8 +90,6 @@
 		525F98DC23DB50880087BE65 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		525F98DF23DB50AC0087BE65 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		525F98E123DB50C90087BE65 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
-		525F98E423DB51090087BE65 /* SignAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAPI.swift; sourceTree = "<group>"; };
-		525F98E723DB52F50087BE65 /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
 		526BB39E246700B700D90874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52D4A55323E3B42800F1BA31 /* WebScraping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScraping.swift; sourceTree = "<group>"; };
 		52E5E51B23DFABFE00D5473F /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
@@ -337,7 +333,6 @@
 		525F98E323DB50F40087BE65 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				525F98E423DB51090087BE65 /* SignAPI.swift */,
 				520D390323E629D1002F57E4 /* SignWebScrapAPI.swift */,
 			);
 			path = Network;
@@ -346,7 +341,6 @@
 		525F98E623DB52E90087BE65 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				525F98E723DB52F50087BE65 /* SignService.swift */,
 				520D390523E62E89002F57E4 /* SignScrapService.swift */,
 			);
 			path = Network;
@@ -567,8 +561,6 @@
 				521E533623D7B8F7005FC42F /* UIColor+Utils.swift in Sources */,
 				524EF4E423D8B00C00A8F8ED /* PulseAnimation.swift in Sources */,
 				52E5E51C23DFABFE00D5473F /* HUD.swift in Sources */,
-				525F98E523DB51090087BE65 /* SignAPI.swift in Sources */,
-				525F98E823DB52F50087BE65 /* SignService.swift in Sources */,
 				521E532223D7B890005FC42F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
