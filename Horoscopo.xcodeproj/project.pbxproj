@@ -33,7 +33,6 @@
 		525F98D523DB31440087BE65 /* SignDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98D423DB31440087BE65 /* SignDetailsViewModel.swift */; };
 		525F98D823DB317C0087BE65 /* SignDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98D723DB317C0087BE65 /* SignDetailsModel.swift */; };
 		525F98DB23DB505C0087BE65 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DA23DB505C0087BE65 /* ServiceProtocol.swift */; };
-		525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DC23DB50880087BE65 /* ServiceProvider.swift */; };
 		525F98E023DB50AC0087BE65 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98DF23DB50AC0087BE65 /* ServiceError.swift */; };
 		525F98E223DB50C90087BE65 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F98E123DB50C90087BE65 /* ParameterEncoder.swift */; };
 		526BB39F246700B700D90874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 526BB39E246700B700D90874 /* GoogleService-Info.plist */; };
@@ -88,7 +87,6 @@
 		525F98D423DB31440087BE65 /* SignDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDetailsViewModel.swift; sourceTree = "<group>"; };
 		525F98D723DB317C0087BE65 /* SignDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDetailsModel.swift; sourceTree = "<group>"; };
 		525F98DA23DB505C0087BE65 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
-		525F98DC23DB50880087BE65 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		525F98DF23DB50AC0087BE65 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		525F98E123DB50C90087BE65 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		526BB39E246700B700D90874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 			children = (
 				525F98DE23DB50960087BE65 /* Encoder */,
 				525F98DA23DB505C0087BE65 /* ServiceProtocol.swift */,
-				525F98DC23DB50880087BE65 /* ServiceProvider.swift */,
 				52920A5C248D402600F3A297 /* Provider.swift */,
 			);
 			path = Network;
@@ -561,7 +558,6 @@
 				520D390423E629D1002F57E4 /* SignWebScrapAPI.swift in Sources */,
 				52D4A55423E3B42800F1BA31 /* WebScraping.swift in Sources */,
 				525F98D523DB31440087BE65 /* SignDetailsViewModel.swift in Sources */,
-				525F98DD23DB50880087BE65 /* ServiceProvider.swift in Sources */,
 				521E533623D7B8F7005FC42F /* UIColor+Utils.swift in Sources */,
 				524EF4E423D8B00C00A8F8ED /* PulseAnimation.swift in Sources */,
 				52E5E51C23DFABFE00D5473F /* HUD.swift in Sources */,
