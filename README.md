@@ -4,7 +4,7 @@
 # Horoscopo
 It is an app to show what the stars have to say about you today!
 
-## What is it? :squirrel:
+## What is it? :octocat:
 Horoscopo is a astral app, ready to talk to the whole universe to bring you what your destiny waits for you...
 
 ## Screenshots :iphone:
